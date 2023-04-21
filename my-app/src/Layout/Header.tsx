@@ -5,7 +5,7 @@ function Header(props:any) {
     return(
         <Container>
             <Element>
-                <Shortcut>로그인/ 회원가입 </Shortcut>
+                <Shortcut>로그인 / 회원가입 </Shortcut>
                 <Logo>
                     <img
                     width="100%"
