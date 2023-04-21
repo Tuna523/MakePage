@@ -7,7 +7,7 @@ function Navigation(props:any) {
     return (
         <Nav>
             <NavList>
-            <button style={{display: 'flex'}} onClick={(e)=>{e.preventDefault(); setMenuBool(!menuBool); console.log(menuBool);}}>
+            <button style={{display: 'flex', backgroundColor: 'transparent', border: 'none', margin: '2px'}} onClick={(e)=>{e.preventDefault(); setMenuBool(!menuBool); console.log(menuBool);}}>
                 <img
                 width='24px'
                 height='24px'
