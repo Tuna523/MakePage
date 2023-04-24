@@ -18,7 +18,7 @@ function Home(props:any) {
     };
 
     console.log(icon);
-    const img_url = `http://openweather.map.org/img/w/${icon}.png`;
+    const img_url = `http://openweathermap.org/img/w/${icon}.png`;
     
     
         getWeather()
