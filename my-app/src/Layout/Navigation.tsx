@@ -1,5 +1,6 @@
 import React, {Component, useState} from "react";
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 // let menuBool = false;
 
 function Navigation(props:any) {
@@ -15,10 +16,14 @@ function Navigation(props:any) {
             </button>
             { menuBool ?
             <>
-                <NavItem>NavItem1</NavItem>
-                <NavItem>NavItem2</NavItem>
-                <NavItem>NavItem3</NavItem>
-                <NavItem>NavItem4</NavItem>
+                <NavItem><a href="About">소개</a></NavItem>
+                <NavItem><a href="Board">게시판</a></NavItem>
+                <NavItem><a href="MyBoard">내 글 보기</a></NavItem>
+                <NavItem><a href="MyPage">마이페이지</a></NavItem>
+                {/* <NavItem><Link to='/About'> 소개 </Link></NavItem>
+                <NavItem><Link to='/Board'> 게시판 </Link></NavItem>
+                <NavItem><Link to='/MyBoard'> 내 글 보기 </Link></NavItem>
+                <NavItem><Link to='/MyPage'> 마이페이지 </Link></NavItem> */}
                 <NavItem>NavItem5</NavItem>
                 <NavItem>NavItem5</NavItem>
                 <NavItem>NavItem5</NavItem>

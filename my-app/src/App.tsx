@@ -24,11 +24,7 @@ width: 100%;
 flex-flow: row wrap;
 `
 const Content = styled.div`
-display: block;
-margin: 0 10 0 10px;
-padding: 15px;
-border: 1px solid black;
-background-color: #defafc;
+
 `
 
 export default App;
