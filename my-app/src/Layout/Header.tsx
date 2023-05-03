@@ -5,7 +5,10 @@ function Header(props:any) {
     return(
         <Container>
             <Element>
-                <Shortcut>로그인 / 회원가입 </Shortcut>
+                <ShortCut>
+                    <Main><a href="/" style={{textDecoration: 'none', color: 'black'}}>메인화면</a></Main>
+                    <Login><a href="Login" style={{textDecoration: 'none', color: 'black'}}>로그인 / 회원가입</a></Login>
+                </ShortCut>
                 <Logo>
                     <img
                     width="100%"
@@ -33,12 +36,27 @@ const Element = styled.div`
     flex-flow: row wrap;
 `
 
-const Shortcut = styled.div`
-    order: 1;
-    width: 100%;
-    height: 20px;
-    text-align: right;
-    background-color: #a8ff78;
+const ShortCut = styled.div`
+display: flex;
+width: 100%;
+height: 20px;
+background-color: #a8ff78;
+`
+
+const Main = styled.div`
+order: 1;
+margin-right: auto;
+margin-left: 5px;
+text-align: left;
+height: 20px;
+`
+
+const Login = styled.div`
+order: 1;
+margin-left: auto;
+margin-right: 5px;
+text-align: right;
+height: 20px;
 `
 
 const Logo = styled.div`

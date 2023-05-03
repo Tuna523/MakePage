@@ -16,10 +16,10 @@ function Navigation(props:any) {
             </button>
             { menuBool ?
             <>
-                <NavItem><a href="About">소개</a></NavItem>
-                <NavItem><a href="Board">게시판</a></NavItem>
-                <NavItem><a href="MyBoard">내 글 보기</a></NavItem>
-                <NavItem><a href="MyPage">마이페이지</a></NavItem>
+                <NavItem><a href="About" style={{textDecoration: 'none', color: 'black'}}>소개</a></NavItem>
+                <NavItem><a href="Board" style={{textDecoration: 'none', color: 'black'}}>게시판</a></NavItem>
+                <NavItem><a href="MyBoard" style={{textDecoration: 'none', color: 'black'}}>내 글 보기</a></NavItem>
+                <NavItem><a href="MyPage" style={{textDecoration: 'none', color: 'black'}}>마이페이지</a></NavItem>
                 {/* <NavItem><Link to='/About'> 소개 </Link></NavItem>
                 <NavItem><Link to='/Board'> 게시판 </Link></NavItem>
                 <NavItem><Link to='/MyBoard'> 내 글 보기 </Link></NavItem>
