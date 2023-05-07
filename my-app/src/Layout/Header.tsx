@@ -7,7 +7,11 @@ function Header(props:any) {
             <Element>
                 <ShortCut>
                     <Main><a href="/" style={{textDecoration: 'none', color: 'black'}}>메인화면</a></Main>
+                    {props.logged ? 
+                    <Login><a href="Login" style={{textDecoration: 'none', color: 'black'}}>로그아웃</a></Login> :
                     <Login><a href="Login" style={{textDecoration: 'none', color: 'black'}}>로그인 / 회원가입</a></Login>
+                }
+                    
                 </ShortCut>
                 <Logo>
                     <img
