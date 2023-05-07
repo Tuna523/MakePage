@@ -7,12 +7,28 @@ import KakaoLogin from 'react-kakao-login';
 import styled from 'styled-components';
 import { REST_API_KEY, REDIRECT_URI } from './KakaoLoginData';
 function Login() {
-    const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`;
+    // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`;
+    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`
 
-    const handleLogin = () => {
-        window.location.href = KAKAO_AUTH_URL;
+    const kakaoButtonStyle={
+        padding: "0",
+        width: '190px',
+        height: '44px',
+        lineHeight: '44px',
+        color: '#783c00',
+        backgroundColor: '#FFEB00',
+        border: '1px solid transparent',
+        borderRadius: '3px',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        
     }
 
+    const handleLogin = () => {
+        window.location.href = kakaoURL;
+    }
+
+    const code = new URL(window.location.href).searchParams.get("code");
     const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [provider, setProvider] = useState('');
@@ -30,7 +46,8 @@ function Login() {
 
     return(
         <Container>
-                <KakaoButton key={'7db384553e7e35924040937ef84910d4'} token='' onSuccess={responseKakao} onFail={responseFail}/>
+                {/* <KakaoButton key={'7db384553e7e35924040937ef84910d4'} token='' onSuccess={responseKakao} onFail={responseFail}/> */}
+                <button style={kakaoButtonStyle} onClick={handleLogin}>카카오 로그인</button>
         </Container>
     )
 }
