@@ -6,7 +6,9 @@ import React, {Component, useState} from 'react';
 import KakaoLogin from 'react-kakao-login';
 import styled from 'styled-components';
 import { REST_API_KEY, REDIRECT_URI } from './KakaoLoginData';
-function Login() {
+const Login: React.FC<{
+    setonLogin: any
+}> = ({setonLogin}) => {
     // const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`;
     const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`
 
@@ -37,6 +39,7 @@ function Login() {
         setId(res.profile.id);
         setName(res.profile.properties.nickname);
         setProvider('kakao');
+        setonLogin();
     }
 
     function responseFail() {
