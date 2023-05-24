@@ -5,7 +5,7 @@ import Login from './Login';
 const LoginContainer = () => {
     <Store.Consumer>
         {store => (
-            <Login setonLogin={store.onLogin}/>)}
+            <Login onLoginFunc={store.onLogin}/>)}
     </Store.Consumer>
 }
 

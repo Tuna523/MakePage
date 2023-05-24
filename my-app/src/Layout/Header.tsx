@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 
 function Header(props:any) {
+    
     return(
         <Container>
             <Element>
                 <ShortCut>
                     <Main><a href="/" style={{textDecoration: 'none', color: 'black'}}>메인화면</a></Main>
                     {props.logged ? 
-                    <Login><a href="Login" style={{textDecoration: 'none', color: 'black'}}>로그아웃</a></Login> :
+                    <Login><a href="/" style={{textDecoration: 'none', color: 'black'}} onClick={props.onLogoutFunc()}>로그아웃</a></Login> :
                     <Login><a href="Login" style={{textDecoration: 'none', color: 'black'}}>로그인 / 회원가입</a></Login>
                 }
                     

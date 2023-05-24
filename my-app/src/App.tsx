@@ -7,11 +7,13 @@ import Router from './Routes/Router';
 import Store from './Store/store';
 
 function App() {
-
   const [logged, setLogged] = useState(false);
-  const [onLogin, setonLogin] = useState(Boolean);
-  const [onLogout, setonLogout] = useState(Boolean);
-  let states = [logged, onLogin, onLogout];
+  
+  // const [onLogin, setonLogin] = useState(Boolean);
+  // const [onLogout, setonLogout] = useState(Boolean);
+
+  // console.log(window.location.href);
+
   // console.log(onLogout);
   // console.log(onLogin);
 
@@ -23,12 +25,12 @@ function App() {
   }
 
   return (
-    <Store.Provider value={states}>
+    <Store.Provider value={logged}>
       <Layout>
-        <Header logged={logged} onLogout={onLogout} />
+        <Header logged={logged} onLogoutFunc={onLogoutFunc} onLoginFunc={onLoginFunc} />
         <Navigation />
         <Content>
-          <Router setonLogin={setonLogin}/>
+          <Router onLoginFunc={onLoginFunc}/>
         </Content>
       </Layout>
     </Store.Provider>
